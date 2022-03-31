@@ -28,8 +28,8 @@ jobs:
       run: openssl enc -nosalt -aes-256-cbc -d -in assets/server.key.enc -out server.key -base64 -K ${{secrets.DECRYPTION_KEY}} -iv ${{secrets.DECRYPTION_IV}}
     - name: 'Authorize'
       run: |
-        sfdx force:auth:jwt:grant --clientid=${{ secrets.CONSUMER_KEY_DEW1 }} --username=${{ secrets.USERNAME_DEVW1  }} --jwtkeyfile server.key --setdefaultdevhubusername --setalias=hub-org
+        sfdx force:auth:jwt:grant --clientid=${{ secrets.CONSUMER_KEY }} --username=${{ secrets.USERNAME  }} --jwtkeyfile server.key --setdefaultdevhubusername --setalias=dec-hub
     - name: 'Convert Metadata'
       run: sfdx force:source:convert --rootdir=force-app --outputdir=convert
     - name: 'Run Test on Metadata'
-      run: sfdx force:mdapi:deploy --deploydir=convert --testlevel=RunLocalTests --checkonly -u hub-org
+      run: sfdx force:mdapi:deploy --deploydir=convert --testlevel=RunLocalTests --checkonly -u dec-hub
