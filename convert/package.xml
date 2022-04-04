@@ -32,7 +32,6 @@
         <members>remoteControl</members>
         <members>selector</members>
         <members>tile</members>
-        <name>LightningComponentBundle</name>
     </types>
     <types>
         <members>ExerciseFiles</members>
