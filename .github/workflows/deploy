@@ -1,4 +1,4 @@
-name: Manual Deploy DEVCPQW1
+
 on:
   push
   branches[staging]
