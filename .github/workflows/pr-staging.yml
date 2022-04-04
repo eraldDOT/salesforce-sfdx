@@ -23,7 +23,7 @@ jobs:
         tar xJf sfdx-linux-amd64.tar.xz -C sfdx-cli --strip-components 1
         ./sfdx-cli/install
     - name: 'Decrypt file'
-      run: openssl enc -nosalt -aes-256-cbc -d -in assets/server.key.enc -out server.key -base64 -K ${{secrets.DECRIPTION_KEY}} -iv ${{secrets.DECRYPTION_IV}}
+      run: openssl enc -nosalt -aes-256-cbc -d -in assets/data/server.key.enc -out server.key -base64 -K ${{secrets.DECRIPTION_KEY}} -iv ${{secrets.DECRYPTION_IV}}
     - name: 'Authorize'
       run: |
         sfdx force:auth:jwt:grant --clientid=${{ secrets.CONSUMER_KEY }} --username=${{ secrets.USERNAME  }} --jwtkeyfile server.key --setdefaultdevhubusername --setalias=dec-hub
