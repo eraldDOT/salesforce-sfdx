@@ -16,3 +16,6 @@ The `sfdx-project.json` file contains useful configuration information for your 
 - [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
 - [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
 - [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+
+## Codacy badge
+<a href="https://www.codacy.com/gh/eraldDOT/salesforce-sfdx/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=eraldDOT/salesforce-sfdx&amp;utm_campaign=Badge_Grade"><img src="https://app.codacy.com/project/badge/Grade/1e84ec3849eb4736902bf2d2f370cfe5"/></a>
